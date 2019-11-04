@@ -1,9 +1,11 @@
-# action.yml
-name: 'PLTcloud'
-description: 'Deploy to PLTcloud'
+name: "PLTcloud"
+description: "Deploy to PLTcloud"
+author: bcdevices
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: docker
+  image: Dockerfile
   env:
     API_TOKEN: ${{ secrets.API_TOKEN }}
     PROJECT_UUID: ${{ secrets.PROJECT_UUID }}
+branding:
+  color: blue
