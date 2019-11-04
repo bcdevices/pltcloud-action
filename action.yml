@@ -1,0 +1,9 @@
+# action.yml
+name: 'PLTcloud'
+description: 'Deploy to PLTcloud'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    API_TOKEN: ${{ secrets.API_TOKEN }}
+    PROJECT_UUID: ${{ secrets.PROJECT_UUID }}
