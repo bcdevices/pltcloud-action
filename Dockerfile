@@ -11,8 +11,8 @@ LABEL "com.github.actions.description"="Publish to PLTcloud"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="https://github.com/bcdevices/action-pltcloud"
-LABEL "homepage"="https://github.com/bcdevices/action-pltcloud"
+LABEL "repository"="https://github.com/bcdevices/pltcloud-action"
+LABEL "homepage"="https://github.com/bcdevices/pltcloud-action"
 LABEL "maintainer"="Blue Clover Devices"
 
 WORKDIR /usr/src

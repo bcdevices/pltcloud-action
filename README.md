@@ -1,2 +1,2 @@
-# action-pltcloud
+# pltcloud-action
 PLTcloud GitHub Action
