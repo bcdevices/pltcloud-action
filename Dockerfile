@@ -11,8 +11,8 @@ LABEL "com.github.actions.description"="Publish to PLTcloud"
 LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="https://github.com/bcdevices/ly10-zephyr-fw"
-LABEL "homepage"="https://github.com/bcdevices/ly10-zephyr-fw"
+LABEL "repository"="https://github.com/bcdevices/action-pltcloud"
+LABEL "homepage"="https://github.com/bcdevices/action-pltcloud"
 LABEL "maintainer"="Blue Clover Devices"
 
 WORKDIR /usr/src
