@@ -1,4 +1,4 @@
-name: "PLTcloud"
+name: "pltcloud"
 description: "Deploy to PLTcloud"
 author: bcdevices
 runs:
