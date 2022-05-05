@@ -20,7 +20,8 @@ inputs:
     required: true
   VERSION:
     description: "Version"
-    required: true
+    required: false
+    default: ${{ GITHUB_REF:10 }}
   DEPLOYMENT_GROUP_UUID:
     description: "Deployment Group UUID"
     required: false
@@ -35,12 +36,15 @@ inputs:
   REPOSITORY:
     description: 'Repository'
     required: false
+    default: ${{ GITHUB_REPOSITORY }}
   REPOSITORY_OWNER:
     description: 'Repository owner'
     required: false
+    default: ${{ GITHUB_REPOSITORY_OWNER }}
   SHA:
     description: 'SHA'
     required: false
+    default: ${{ GITHUB_SHA }}
 runs:
   using: 'docker'
   image: 'Dockerfile'
