@@ -21,7 +21,7 @@ inputs:
   VERSION:
     description: "Version"
     required: false
-    default: ${{ github.ref:10 }}
+    default: ${{ github.ref }}
   DEPLOYMENT_GROUP_UUID:
     description: "Deployment Group UUID"
     required: false
