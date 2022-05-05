@@ -1,8 +1,17 @@
-# pltcloud-action
+# PLTcloud Action 
 
 The PLTcloud action allows publishing firmware releases directly
-to [BCD](https://www.bcdevices.com/)'s
-[PLTcloud](https://www.bcdevices.com/plt/) backend.
+to [BCD](https://www.bcdevices.com/)'s [PLTcloud](https://www.bcdevices.com/plt/) backend.
+It allows you to upload a release to PLTcloud as part of your CI workflow.
+
+## Input variables
+
+You must provide:
+
+  - `API_TOKEN`: PLTcloud API token.
+  - `PROJECT_UUID`: Project id for PLTcloud project.
+  - `FILES`: List of files for upload. Files can be specified with patterns such as: `**/prefix*`, `grandparent/**/child?`, `**/parent/*`, or even just `**`
+  - `VERSION`: Release version
 
 ## Usage
 
@@ -32,16 +41,12 @@ Step 3: Add the PLTcloud action to the GitHub Actions Workflow
 Add a step in the ``.github/workflows/main.yml`` actions workflow,
 after the steps that build the firmware:
 
-```
-- uses: .github/actions/action-pltcloud
-  if: contains(github.ref, 'tags')
-  env:
+```yml
+- uses: .github/actions/action-pltcloud 
+  with:
+    FILES: dist/*
     API_TOKEN: ${{ secrets.API_TOKEN }}
     PROJECT_UUID: ${{ secrets.PROJECT_UUID }}
+    VERSION: ${GITHUB_REF:10}
 ```
 
-
-# License
-
-The Dockerfile and associated scripts and documentation in this project
-are released under the [Apache 2.0 License](LICENSE).
