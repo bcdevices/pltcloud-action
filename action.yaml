@@ -1,0 +1,63 @@
+name: 'PLTcloud Action'
+description: 'Deploy Firmware to PLTcloud'
+author: bcdevices
+branding:
+  color: blue
+  icon: upload-cloud
+inputs:
+  API_TOKEN:
+    description: 'PLTcloud api token'
+    required: true
+  PROJECT_UUID:
+    description: 'PLTcloud project uuid'
+    required: true
+  VERBOSE:
+    description: 'Verbose output'
+    required: false
+    default: 'false'
+  FILES:
+    description: "Files"
+    required: true
+  VERSION:
+    description: "Version"
+    required: false
+    default: ${{ github.ref }}
+  DEPLOYMENT_GROUP_UUID:
+    description: "Deployment Group UUID"
+    required: false
+  AUTO_DEPLOY:
+    description: "Auto deploy release to PLT"
+    required: false
+    default: 'false'
+  CHECK_NAME:
+    description: 'GitHub check name'
+    default: "PLTcloud"
+    required: false
+  REPOSITORY:
+    description: 'Repository'
+    required: false
+    default: ${{ github.repository }}
+  REPOSITORY_OWNER:
+    description: 'Repository owner'
+    required: false
+    default: ${{ github.repository_owner }}
+  SHA:
+    description: 'SHA'
+    required: false
+    default: ${{ github.sha }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    #  checkrun arguments
+    - -r=${{ inputs.REPOSITORY }}
+    - -o=${{ inputs.REPOSITORY_OWNER }}
+    - -s=${{ inputs.SHA }}
+    - -n=${{ inputs.CHECK_NAME }}
+    - -p=${{ inputs.PROJECT_UUID }}
+    - -t=${{ inputs.API_TOKEN }}
+    - -vvv=${{ inputs.VERBOSE }}
+    - -v=${{ inputs.VERSION }}
+    - -f=${{ inputs.FILES }}
+    - -d=${{ inputs.DEPLOYMENT_GROUP_UUID }}
+    - -a=${{ inputs.AUTO_DEPLOY }}

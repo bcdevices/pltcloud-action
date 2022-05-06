@@ -1,9 +1,0 @@
-name: "PLTcloud Action"
-description: "Deploy Firmware to PLTcloud"
-author: bcdevices
-runs:
-  using: docker
-  image: Dockerfile
-branding:
-  color: blue
-  icon: upload-cloud
