@@ -3,15 +3,15 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN set -xe \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
-    musl=1.1.24-1 \
-    wget=1.20.3-1ubuntu1 \
-    ca-certificates=20210119~20.04.2 \
-    uuid-runtime=2.34-0.1ubuntu9.3 \
+    musl=1.2.2-4 \
+    wget=1.21.2-2ubuntu1 \
+    ca-certificates=20211016 \
+    uuid-runtime=2.37.2-4ubuntu3 \
     && rm -rf rm -rf /var/lib/apt/lists/* 
 
 RUN wget --progress=dot:giga https://download.pltcloud.com/cli/pltcloud_0.4.2_amd64.deb \
