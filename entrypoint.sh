@@ -21,6 +21,9 @@ case $i in
     -v=*)
     VERSION="${i#*=}"
     ;;
+    -ds=*)
+    DESCRIPTION="${i#*=}"
+    ;;
     -vvv=*)
     VERBOSE="${i#*=}"
     ;;
@@ -108,6 +111,11 @@ fi
 
 if [ ! -z "${VERSION}" ]; then
   cliArgs[i]="-v ${VERSION}" 
+  i=$((i+1))
+fi
+
+if [ ! -z "${DECRIPTION}" ]; then
+  cliArgs[i]="-v ${DESCRIPTION}" 
   i=$((i+1))
 fi
 

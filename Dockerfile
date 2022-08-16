@@ -14,8 +14,8 @@ RUN set -xe \
     uuid-runtime=2.37.2-4ubuntu3 \
     && rm -rf rm -rf /var/lib/apt/lists/* 
 
-RUN wget --progress=dot:giga https://download.pltcloud.com/cli/pltcloud_0.4.2_amd64.deb \
-    && dpkg -i pltcloud_0.4.2_amd64.deb
+RUN wget --progress=dot:giga https://download.pltcloud.com/cli/pltcloud_0.4.3_amd64.deb \
+    && dpkg -i pltcloud_0.4.3_amd64.deb
 
 COPY entrypoint.sh /entrypoint.sh
 
