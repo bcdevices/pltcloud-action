@@ -19,7 +19,7 @@ Optional:
 
 | input              | description                       |
 | ------------------ | --------------------------------- |
-| `VERBOSE`          | Verbose output (default: 'false') |
+| `VERBOSE`          | Verbose output (default: `false`) |
 | `DEPLOYMENT_GROUP_UUID` | Deployment Group UUID |
 | `AUTO_DEPLOY`      | Auto deploy release to PLT (default: `false`) |
 | `CHECK_NAME`       | GitHub check name (default: `PLTcloud` |
