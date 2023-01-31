@@ -56,7 +56,7 @@ Add a step in the ``.github/workflows/main.yml`` actions workflow,
 after the steps that build the firmware:
 
 ```yml
-- uses: bcdevices/pltcloud-action@v1
+- uses: bcdevices/pltcloud-action@v1.1.3
   with:
     FILES: dist/*
     API_TOKEN: ${{ secrets.API_TOKEN }}
