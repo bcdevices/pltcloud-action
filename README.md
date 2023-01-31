@@ -22,10 +22,6 @@ Optional:
 | `VERBOSE`          | Verbose output (default: `false`) |
 | `DEPLOYMENT_GROUP_UUID` | Deployment Group UUID |
 | `AUTO_DEPLOY`      | Auto deploy release to PLT (default: `false`) |
-| `CHECK_NAME`       | GitHub check name (default: `PLTcloud` |
-| `REPOSITORY`       | Repository (default: `${{ github.repository }}`) |
-| `REPOSITORY_OWNER` | Repository owner (default: `${{ github.repository_owner }}`) |
-| `SHA`              | SHA (default: `${{ github.sha }}`) |
 
 ## Usage
 
