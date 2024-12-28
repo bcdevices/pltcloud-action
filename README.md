@@ -12,13 +12,13 @@ Mandatory:
 | -------------- | -------------------------------- |
 | `API_TOKEN`    | PLTcloud API token.              |
 | `PROJECT_UUID` | Project id for PLTcloud project. |
-| `FILES`        | List of files for upload. Files can be specified with patterns such as: `**/prefix*`, `grandparent/**/child?`, `**/parent/*`, or even just `**` |
-| `VERSION`      | Release version. (default: `${{ github.ref }}`) |
 
 Optional:
 
 | input              | description                       |
 | ------------------ | --------------------------------- |
+| `FILES`            | List of files for upload. Files can be specified with patterns such as: `**/prefix*`, `grandparent/**/child?`, `**/parent/*`, or even just `**` |
+| `VERSION`          | Release version. (default: `${{ github.ref }}`) |
 | `VERBOSE`          | Verbose output (default: `false`) |
 | `DEPLOYMENT_GROUP_UUID` | Deployment Group UUID |
 | `AUTO_DEPLOY`      | Auto deploy release to PLT (default: `false`) |
@@ -52,11 +52,10 @@ Add a step in the ``.github/workflows/main.yml`` actions workflow,
 after the steps that build the firmware:
 
 ```yml
-- uses: bcdevices/pltcloud-action@v1.1.4
+- uses: bcdevices/pltcloud-action@v1.2.0
   with:
     FILES: dist/*
     API_TOKEN: ${{ secrets.API_TOKEN }}
     PROJECT_UUID: ${{ secrets.PROJECT_UUID }}
     VERSION: ${{ github.ref }}
 ```
-

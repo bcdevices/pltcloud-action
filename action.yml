@@ -1,4 +1,5 @@
 name: 'PLTcloud Action'
+# SPDX-License-Identifier: Apache-2.0
 description: 'Deploy Firmware to PLTcloud'
 author: bcdevices
 branding:
