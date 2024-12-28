@@ -1,4 +1,6 @@
 #!/bin/bash -l
+#
+# SPDX-License-Identifier: Apache-2.0
 
 for i in "$@"
 do
