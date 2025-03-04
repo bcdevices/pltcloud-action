@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2019-2024 Blue Clover Devices
+# Copyright (c) 2019-2025 Blue Clover Devices
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -14,7 +14,7 @@ RUN set -xe \
   uuid-runtime=2.37.2-4ubuntu3.4 \
   && rm -rf rm -rf /var/lib/apt/lists/* 
 
-ARG PLTCLOUD_CI_UPLOADER_VERSION="0.5.1"
+ARG PLTCLOUD_CI_UPLOADER_VERSION="0.6.0"
 
 RUN wget --progress=dot:giga https://download.pltcloud.com/cli/pltcloud_${PLTCLOUD_CI_UPLOADER_VERSION}_amd64.deb \
   && dpkg -i pltcloud_${PLTCLOUD_CI_UPLOADER_VERSION}_amd64.deb
